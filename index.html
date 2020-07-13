@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+       <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      /* TODO */
+        .appContent{
+    background: #444;
+    color: #fff;
+   text-align: center;
+}
+img{
+    width:100%;
+    
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom:1px solid #ccc;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-basis: 20px;
+    margin-bottom: 20px;
+}
+.me{
+    line-height: 4rem;
+    font-size: 20px;
+    color:#fff;
+    justify-self: center;
+}
+a:link{
+    color:darkgrey;
+}
+div{
+    margin-top: 20px;
+}
+.app-button{
+    padding: 60px;
+    padding-top: 30px;
+    border-radius: 10px;
+}
+        .app-topbar{
+            margin-bottom: 
+            margin-top: 
+            padding: 
+        }
+        h1{
+            text-align: center;
+            color: #fff;
+        }
+        .top{
+            background: #444;
+            margin-bottom: -30px;
+            
+        }
+        .footer{
+            box-shadow:0 0 20px 1px rgba(37,73,214,0.18); 
+        }
+        browse,incidents{
+            box-shadow:0 0 20px 1px rgba(37,73,214,0.18); 
+        }
+        button{
+            margin-left: 5px;
+            padding: 5px;
+        }
+        ul{
+            list-style: none;
+             box-shadow:0 0 20px 1px rgba(37,73,214,0.18); 
+        }
+        ul li{
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page app-content container" data-page="home">
+      <div class="row center-block" style="margin-top:-15px">
+        <div class="top center-block col-xs-12" >
+            <div class="app-title"><h1>Incidents Record App</h1></div>
+      </div>
+        </div>
+      <div class="">
+         <section><!--front page -->
+          <div class="container appContent">
+               <div class="row header">
+                  <div class="col-md-4"><img class="img-responsive img-circle" style="width:120px; height:100px" src="image/Elvis-cute.jpg"></div> 
+                   <div class="col-sm-6 me">Elvis Igiebor<br><a href="igieborelvis@gmail.com">igieborelvis@gmail.com</a></div>
+              </div>
+               <div class="row center-block">
+                   <div class="col-md-6  btn-primary app-button incidents" style=" font-size: 20px;"  data-target="page2"><p> <i class="fas fa-plus"></i><span style=""> Add New Incidents</span></p></div>
+              </div>
+               <div class="row center-block">
+                   <div class="col-md-6 app-button btn-primary browse" style="; font-size: 20px;"  data-target="page3"><p> <i class="fas fa-search"></i><span style=""> Browse All Incidents</span></p></div>
+              </div>
+               <div class="row center-block">
+                   <div class="col-xs-6 footer" style="height: 100px; background: black; border-radius:20px; margin-bottom: 30px; text-align: center; padding-top: 20px; "><p><i style="color: cornflowerblue; padding-right:20px" class="far fa-question-circle fa-2x"></i><b><span style="font-size: 18px;">Having troubles?</span></b><br><span style="color:gray">contact us</span></p></div>
+              </div>
+               </div>
+      
+      
+      </section>       
+      
+      </div>
+    </div>
+              <!-- submit incidents section page2 -->
+    <div class="app-page" data-page="page2">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Add your incidents</div>
+      </div>
+      
+        
+      <div class="app-content">
+         <div class="container">
+          
+              <p class="leading">Kindly add the inicidents </p>
+          <!-- page-header -->
+          
+      <div class="row">
+          <div class="col-sm-4">
+          
+           <form id="form">
+          <div class="form-group">
+              
+              <label for="formName">Title of incident</label>
+              <input type="text" name="title" id="title" class="form-control">
+               </div>
+               
+               <div class="form-group">
+              <label for="formMessage">Detail of Incident</label>
+                   <textarea type="text" name="text" id="formMessage" rows ="4" class="form-control"></textarea>
+              
+              </div>
+               
+               <button type="submit" class="btn btn-success" id="btn">Submit</button><button class="btn btn-right btn-default">Take a Snapshot</button>
+           </form>
+          </div>
+            </div>
+        </div>
+      </div>
+      </div>
+      
+      <!--  Browse incidents section page3-->
+        <div class="app-page" data-page="page3">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Available Incident</div>
+      </div>
+      <div class="app-content">
+          <div class="container">
+          <div class="row">
+              <div class="col-xs-12 incident">
+                  <h3 id="from wp">Incidents from Wp</h3>
+                  <p>Enable your internet connection pls</p>
+                  <ul>
+                      
+                  </ul>
+              
+              </div>
+              
+              
+      </div>
+              
+              
+    </div>
+            </div>
+      </div>
+      <script src="cordova.js"></script>>
+    <script src="jquery-1.7.1.js"></script>
+    <script src="app.min.js"></script>
+      
+       
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      App.controller('home', function (page) {
+        // put stuff here
+      });
+
+      App.controller('page2', function (page) {
+        // put stuff here
+       
+       // writtenData();
+          $(document).ready(function(){
+              
+             
+          
+          
+          
+      });
+ 
+          });
+         
+                           
+ 
+        
+          
+           
+      
+        
+        
+        
+        
+         App.controller('page3', function (page) {
+        // put stuff here
+             
+          $(document).ready(function(){
+               var rootUrl = 'https://cors-anywhere.herokuapp.com/https://elvislifestyle.000webhostapp.com/';
+          // to access my post
+           const url = `${rootUrl}/wp-json/wp/v2/posts`;
+           var tokenUrl = `${rootUrl}/wp-json/jwt-auth/v1/token`;
+           var myDet = {
+          username: 'Elvis',
+          password: 'JESUSANDME'
+           };
+          var token;
+         loadData();
+          
+ 
+         function loadData(){
+             
+          $.get(url,function(data,status){
+              console.log(data);
+              
+             for (var i = 0; i < data.length; i++){
+                var li = document.createElement('li');
+                 
+                // $('h3').html(data[i].title.rendered)
+                var title = $(li).html(data[i].title.rendered);
+                var h3 = document.createElement('h3');
+                 $(h3).text(title);
+                 $(li).append(data[i].content.rendered);
+                 $('ul').append(li)
+             } 
+             
+              
+          });
+            
+             
+         }
+          
+          
+          
+       
+          
+          
+          
+          
+      });
+              
+          });   
+          
+
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+     
+       
+  </body>
+</html>
